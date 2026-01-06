@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Cortex</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body { 
+        font-family: 'Inter', sans-serif; 
+        /* Disable text selection highlight on mobile for app-like feel */
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+      }
+      
+      /* Safe area variables for Tailwind integration if needed */
+      :root {
+        --sat: env(safe-area-inset-top);
+        --sab: env(safe-area-inset-bottom);
+        --sal: env(safe-area-inset-left);
+        --sar: env(safe-area-inset-right);
+      }
+
+      /* Custom scrollbar for cleaner UI */
+      ::-webkit-scrollbar { width: 4px; height: 4px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #d4d4d4; border-radius: 3px; }
+      .dark ::-webkit-scrollbar-thumb { background: #404040; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "idb-keyval": "https://esm.sh/idb-keyval@6.2.1"
+  }
+}
+</script>
+</head>
+  <body class="bg-white dark:bg-black text-black dark:text-white overflow-hidden select-none">
+    <div id="root"></div>
+  </body>
+</html>
